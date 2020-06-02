@@ -1,0 +1,126 @@
+{
+  "private": false,
+  "license": "MIT",
+  "name": "react-babylonjs-3d",
+  "version": "0.0.0-development",
+  "description": "BabylonJS 3D in a declarative way",
+  "main": "./dist/react-babylon-3d.js",
+  "module": "./src/index.js",
+  "keywords": [
+    "babylonjs",
+    "react",
+    "jsx"
+  ],
+  "contributors": [
+    {
+      "name": "Vinicius Carneiro",
+      "email": "vinicius.ribeiro.carneiro@gmail.com"
+    }
+  ],
+  "release": {
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ]
+  },
+  "scripts": {
+    "build:prod": "NODE_ENV=production webpack",
+    "build:dev": "NODE_ENV=development webpack",
+    "prepublish": "npm run build:prod && npm run build:dev",
+    "lint": "eslint .",
+    "test-only": "mocha --opts ./mocha.opts",
+    "test": "nyc npm run test-only",
+    "prettier": "prettier --config ./.prettierrc --write \"{src,test,tests,mocks,examples}/**/*.js\"",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once",
+    "commit": "npx git-cz"
+  },
+  "nyc": {
+    "watermarks": {
+      "lines": [
+        80,
+        95
+      ],
+      "functions": [
+        80,
+        95
+      ],
+      "branches": [
+        80,
+        95
+      ],
+      "statements": [
+        80,
+        95
+      ]
+    },
+    "exclude": [
+      "**/*.spec.js",
+      "examples",
+      "test"
+    ],
+    "include": [
+      "src/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text",
+      "text-summary",
+      "html"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viniciusrmcarneiro/react-babylonjs.git"
+  },
+  "engines": {
+    "node": ">= 8.2.1",
+    "npm": ">= 5.30.0"
+  },
+  "author": "Vinicius R. M. Carneiro",
+  "dependencies": {
+    "react-reconciler": "^0.12.0"
+  },
+  "peerDepedencies": {
+    "babylonjs": "3.*",
+    "react": "16.*.*"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.0",
+    "@semantic-release/git": "^7.0.3",
+    "@semantic-release/github": "^5.0.4",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "chai": "4.1.2",
+    "codacy-coverage": "^2.1.1",
+    "codecov.io": "^0.1.6",
+    "coveralls": "^3.0.2",
+    "eslint": "^4.19.1",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-react": "^7.10.0",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "prettier": "^1.14.0",
+    "ramda": "^0.25.0",
+    "react": "^16.4.2",
+    "react-devtools": "^3.2.3",
+    "semantic-release": "^15.9.12",
+    "sinon": "^6.1.4",
+    "travis-deploy-once": "^5.0.7",
+    "typescript": "^2.9.2",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0"
+  }
+}
