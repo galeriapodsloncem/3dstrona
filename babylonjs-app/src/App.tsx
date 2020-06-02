@@ -5,7 +5,7 @@ import 'materialize-css';
 
 import Scena from './Scena'
 import NavLeft from './NavLeft'
-import WithModel from './WithModel old'
+import WithModel from './WithModel'
 
 class App extends React.Component {
 render(){
