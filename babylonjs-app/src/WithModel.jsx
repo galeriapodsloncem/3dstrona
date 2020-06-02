@@ -31,10 +31,10 @@ class WithModel extends Component {
               <Scene>
                 <arcRotateCamera
                   name="arc"
-                  target={new Vector3(0, 5, 0)}
+                  target={new Vector3(0, 3, 0)}
                   alpha={Math.PI / 2}
                   beta={0.5 + Math.PI / 7}
-                  radius={25}
+                  radius={11}
                   minZ={0.001}
                   wheelPrecision={50}
                   lowerRadiusLimit={8}
@@ -46,8 +46,8 @@ class WithModel extends Component {
                   //rotation={new Vector3(0, this.state.modelRotationY, 0)} position={new Vector3(0, 1, 0)}
 
                   rootUrl={`${baseUrl}assets/`}
-                  sceneFilename="elewacja.gltf"
-                  scaling={new Vector3(200, 200, 200)}
+                  sceneFilename="cottage_obj.obj"
+                  scaling={new Vector3(.1, .1, .1)}
                   position={new Vector3(0, 2.5, 0)}
                 />
                 
