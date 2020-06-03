@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-
 import { Engine, Scene, withBabylonJS, Model } from "react-babylonjs";
 import {
+  Color4,
   Vector3,
   Color3,
   FresnelParameters,
   ActionManager,
-  SetValueAction
+  SetValueAction,
 } from "@babylonjs/core";
 import { PrismCode } from "react-prism";
 
@@ -15,9 +15,8 @@ import { PrismCode } from "react-prism";
 class WithModel extends Component {
   render() {
     let baseUrl =
-      
-      'https://raw.githubusercontent.com/galeriapodsloncem/3dstrona/master/babylonjs-app/public/';
-      
+      "https://raw.githubusercontent.com/galeriapodsloncem/3dstrona/master/babylonjs-app/public/";
+
     return (
       <div>
         <div className="row"></div>
@@ -28,68 +27,60 @@ class WithModel extends Component {
               adaptToDeviceRatio={true}
               canvasId="sample-canvas"
             >
-              <Scene>
+              <Scene clearColor={new Color4(0.1, 0.5, 0.5, 0.1)}>
+                <pointLight
+                  name="light22"
+                  intensity={0.8}
+                  position={new Vector3(11, 0, 30)}
+                  specularPower={12}
+                  useBlurExponentialShadowMap={true}
+                  useContactHardeningShadow={true}
+                  shadowCasters={["apartament", ""]}
+                >
+                <shadowGenerator
+                    mapSize={1024}
+                    useBlurExponentialShadowMap={true}
+                    blurKernel={32}
+                    darkness={0.8}
+                    shadowCasters={["apartament", ""]}
+                    forceBackFacesOnly={true}
+                    depthScale={5}
+                    useBlurCloseExponentialShadowMap={true}
+                  />
+                  </pointLight>
+
+
+                <hemisphericLight
+                  name="hemi-light"
+                  intensity={0.2}
+                  direction={Vector3.Up()}
+                  diffuseColor={Color3.Black()}
+                  emissiveColor={new Color3(1, 0.5, 0.5)}
+                  
+                  position={new Vector3(-4, 46, -40)}
+                  
+                />
+
                 <arcRotateCamera
                   name="arc"
-                  target={new Vector3(0, 3, 0)}
-                  alpha={Math.PI / 2}
-                  beta={0.5 + Math.PI / 7}
-                  radius={11}
-                  minZ={0.001}
+                  target={new Vector3(2, 0, 2)}
+                  alpha={Math.PI / 4}
+                  beta={0.5 + Math.PI / 16}
+                  radius={15}
+                  minZ={0.0001}
                   wheelPrecision={50}
                   lowerRadiusLimit={8}
                   upperRadiusLimit={20}
                   upperBetaLimit={Math.PI / 2}
                 />
-                
-                <Model
-                  //rotation={new Vector3(0, this.state.modelRotationY, 0)} position={new Vector3(0, 1, 0)}
 
-                  rootUrl={`${baseUrl}assets/`}
-                  sceneFilename="cottage_obj.obj"
-                  scaling={new Vector3(.1, .1, .1)}
-                  position={new Vector3(0, 2.5, 0)}
-                />
-                
-                <sphere
-                  name="sphere1"
-                  diameter={2}
-                  segments={16}
-                  position={new Vector3(5, 2.5, 3)}
-                />
-                <sphere
-                  name="sphere2"
-                  diameter={2}
-                  segments={16}
-                  position={new Vector3(-5, 2.5, -2)}
-                  
-                >
-                <standardMaterial name='material1' specularPower={16}
-                diffuseColor={Color3.Black()}
-                emissiveColor={new Color3(54, 0.5, 0.5)}
-                reflectionFresnelParameters={FresnelParameters.Parse({
-                    isEnabled: true,
-                    leftColor: [1, 1, 1],
-                    rightColor: [0, 0, 0],
-                    bias: 0.1,
-                    power: 1
-                })}
-              />
-              </sphere>
-                <ground
-                  name="ground1"
-                  width={100}
-                  height={100}
-                  subdivisions={2}
-                  receiveShadows={true}
-                ></ground>
                 <directionalLight
                   name="shadow-light"
                   setDirectionToTarget={[Vector3.Zero()]}
                   direction={Vector3.Zero()}
-                  position={new Vector3(-40, 30, -40)}
-                  intensity={0.4}
-                  shadowMinZ={1}
+                  position={new Vector3(-40, 46, -40)}
+                  intensity={0.6}
+                  shadowMinZ={44}
                   shadowMaxZ={2500}
                 >
                   <shadowGenerator
@@ -97,16 +88,39 @@ class WithModel extends Component {
                     useBlurExponentialShadowMap={true}
                     blurKernel={32}
                     darkness={0.8}
-                    shadowCasters={["sphere1", "sphere2"]}
+                    shadowCasters={["apartament", ""]}
                     forceBackFacesOnly={true}
                     depthScale={5}
+                    useBlurCloseExponentialShadowMap={true}
                   />
-                  <hemisphericLight
-                  name="light1"
-                  intensity={0.7}
-                  direction={Vector3.Up()}
-                />
+                  <pointLight
+                    name="light2"
+                    intensity={0.8}
+                    position={new Vector3(0, 50, 0)}
+                  />
                 </directionalLight>
+
+                <model
+                  //rotation={new Vector3(0, this.state.modelRotationY, 0)} position={new Vector3(0, 1, 0)}
+                  name="apartament"
+                  rootUrl={`${baseUrl}assets/`}
+                  sceneFilename="APARTAMENT5.stl"
+                  scaling={new Vector3(0.4, 0.4, 0.4)}
+                  position={new Vector3(0, 2.5, 0)}
+                  receiveShadows={false}
+                >
+                  <standardMaterial
+                    name=""
+                    diffuseColor={Color3.Black()}
+                    specularColor={Color3.Black()}
+                  />
+                </model>
+
+                <vrExperienceHelper
+                  webVROptions={{ createDeviceOrientationCamera: false }}
+                  teleportEnvironmentGround
+                  enableInteractions
+                />
               </Scene>
             </Engine>
           </div>
