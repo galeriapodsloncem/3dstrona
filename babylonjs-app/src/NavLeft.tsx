@@ -15,7 +15,7 @@ class NavLeft extends React.Component {
           `}
   </style>
   <SideNav
-    className="black"
+    className=""
     id="SideNav-10"
     options={{
       draggable: true

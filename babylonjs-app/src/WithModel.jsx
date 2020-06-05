@@ -115,7 +115,9 @@ class WithModel extends Component {
                     specularColor={Color3.Black()}
                   />
                 </model>
+              <sphere>
 
+              </sphere>
                 <vrExperienceHelper
                   webVROptions={{ createDeviceOrientationCamera: false }}
                   teleportEnvironmentGround

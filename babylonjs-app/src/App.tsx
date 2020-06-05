@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Row, Col,} from 'react-materialize';
+import {Row, Col, Card} from 'react-materialize';
 import 'materialize-css';
 
 import Scena from './Scena'
@@ -25,9 +25,17 @@ render(){
          s={12}
          offset="">
            <Row></Row><Row></Row><Row></Row>
+        <Row>
         <WithModel/>
+        </Row>
+        <Row>
+          <Card>
+            sdjhgfsdufhjsd gfjhsd gjhf gsdjhgf jkasgdk fjsadg
+          </Card>
+        </Row>
         </Col>
       </Row>
+
     </div>
   );
 }
