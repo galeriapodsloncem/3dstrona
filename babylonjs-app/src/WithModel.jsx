@@ -104,7 +104,7 @@ class WithModel extends Component {
                   //rotation={new Vector3(0, this.state.modelRotationY, 0)} position={new Vector3(0, 1, 0)}
                   name="apartament"
                   rootUrl={`${baseUrl}assets/`}
-                  sceneFilename="APARTAMENT5.stl"
+                  sceneFilename="piwnicablend.babylon"
                   scaling={new Vector3(0.4, 0.4, 0.4)}
                   position={new Vector3(0, 2.5, 0)}
                   receiveShadows={false}
