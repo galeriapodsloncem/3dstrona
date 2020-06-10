@@ -569,8 +569,9 @@ class WithModel extends Component {
                     position={new Vector3(0, 50, 0)}
                   />
                 </directionalLight>
-
+                        
                 <model
+                //model sceny starej piwnicablend.babylon
                   //rotation={new Vector3(0, this.state.modelRotationY, 0)} position={new Vector3(0, 1, 0)}
                   name="apartament"
                   rootUrl={`${baseUrl}assets/`}
