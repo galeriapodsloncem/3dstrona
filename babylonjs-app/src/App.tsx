@@ -5,8 +5,8 @@ import 'materialize-css';
 
 import Scena from './Scena'
 import NavLeft from './NavLeft'
-import WithModel from './WithModel'
-
+import WithModel from './WithModel.jsx'
+//import GUI from './WithGUI'
 class App extends React.Component {
 render(){
   return (
@@ -29,9 +29,8 @@ render(){
         <WithModel/>
         </Row>
         <Row>
-          <Card>
-            sdjhgfsdufhjsd gfjhsd gjhf gsdjhgf jkasgdk fjsadg
-          </Card>
+          
+          
         </Row>
         </Col>
       </Row>
