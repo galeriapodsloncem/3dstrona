@@ -463,6 +463,7 @@ class WithModel extends Component {
                 <pointLight
                   name="swiatlobar"
                   intensity={0.3}
+                  range={5}
                   position={new Vector3(62, 10, 12)}
                   specularPower={0}
                   useBlurExponentialShadowMap={true}
@@ -482,23 +483,39 @@ class WithModel extends Component {
                 </pointLight>
                 <pointLight
                   name="swiatlobar2"
-                  intensity={0.3}
-                  position={new Vector3(62, 10, 22)}
+                  intensity={0.9}
+                  range={15}
+                  position={new Vector3(66, 10, 17)}
                   specularPower={0}
                   useBlurExponentialShadowMap={true}
                   useContactHardeningShadow={true}
                   shadowCasters={["apartament", ""]}
                 >
-                  <shadowGenerator
-                    mapSize={1024}
-                    useBlurExponentialShadowMap={true}
-                    blurKernel={32}
-                    darkness={0.8}
-                    shadowCasters={["apartament", ""]}
-                    forceBackFacesOnly={true}
-                    depthScale={5}
-                    useBlurCloseExponentialShadowMap={true}
-                  />
+                  
+                </pointLight>
+                <pointLight
+                  name="swiatlobar3"
+                  intensity={0.9}
+                  range={15}
+                  position={new Vector3(70, 10, 17)}
+                  specularPower={0}
+                  useBlurExponentialShadowMap={true}
+                  useContactHardeningShadow={true}
+                  shadowCasters={["apartament", ""]}
+                >
+                  
+                </pointLight>
+                <pointLight
+                  name="swiatlobar4"
+                  intensity={0.9}
+                  range={15}
+                  position={new Vector3(75, 10, 17)}
+                  specularPower={0}
+                  useBlurExponentialShadowMap={true}
+                  useContactHardeningShadow={true}
+                  shadowCasters={["apartament", ""]}
+                >
+                  
                 </pointLight>
 
                 <pointLight
@@ -524,7 +541,7 @@ class WithModel extends Component {
                 </pointLight>
                 <pointLight
                   name="expositionLight"
-                  intensity={0.9}
+                  intensity={0.2}
                   position={new Vector3(lightExpoX, lightExpoY, lightExpoZ)}
                   specularPower={12}
                   useBlurExponentialShadowMap={true}
@@ -565,7 +582,8 @@ class WithModel extends Component {
                   />
                   <pointLight
                     name="light2"
-                    intensity={0.8}
+                    range={5}
+                    intensity={0.2}
                     position={new Vector3(0, 50, 0)}
                   />
                 </directionalLight>
@@ -575,7 +593,7 @@ class WithModel extends Component {
                   //rotation={new Vector3(0, this.state.modelRotationY, 0)} position={new Vector3(0, 1, 0)}
                   name="apartament"
                   rootUrl={`${baseUrl}assets/`}
-                  sceneFilename="piwnicablend.babylon"
+                  sceneFilename='scene.babylon'
                   scaling={new Vector3(0.4, 0.4, 0.4)}
                   position={new Vector3(0, 2.5, 0)}
                   receiveShadows={false}
