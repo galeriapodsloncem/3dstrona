@@ -8,6 +8,7 @@
     "@babylonjs/inspector": "^4.1.0",
     "@babylonjs/loaders": "^4.1.0",
     "@types/classnames": "^2.2.10",
+    "@types/react-router-dom": "^5.1.5",
     "babylonjs": "^4.1.0",
     "babylonjs-gui": "^4.1.0",
     "cannon": "^0.6.2",
@@ -18,6 +19,7 @@
     "react-materialize": "^3.9.2",
     "react-prism": "^4.3.2",
     "react-reconciler": "^0.25.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.1.2",
     "typescript": "3.6.3"
   },
