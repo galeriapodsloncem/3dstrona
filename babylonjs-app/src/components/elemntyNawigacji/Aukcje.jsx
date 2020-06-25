@@ -19,7 +19,7 @@ import "materialize-css";
 
 import React, { Component } from "react";
 
-import ListaAukcji from "./ListaAukcji";
+import ListaAukcji from "../../jsony/ListaAukcji";
 
 class Aukcje extends Component {
   constructor() {
@@ -48,7 +48,7 @@ class Aukcje extends Component {
     }).map((data) => {
       return (
         <div>
-          <Col m={6} s={12} push="">
+          <Col m={12} s={12} push="">
             <Card
               className="z-depth-1 hoverable "
               id="Cardposters"
@@ -77,14 +77,60 @@ class Aukcje extends Component {
       <div>
         <Row>
           <Row></Row>
-          <Col m={10} s={12}>
+          <Col m={6} s={12}>
+            <Card className="z-depth-3">
             <input
-              className="input"
+              className="input "
               type="text"
               placeholder="Wyszukaj aukcje po autorze, nazwie dzieła lub cenie "
               onChange={(e) => this.searchSpace(e)}
             />
+            </Card>
             {items}
+          </Col>
+          <Col m={5} s={12}>
+            <Card>
+              <h4>Propomowane aukcje</h4>
+              <Row></Row>
+              <Card
+              className="z-depth-1 hoverable "
+              id="Cardposters"
+              actions={[
+                <a key="1" href="https://www.zakopane.pl/assets/zakopane25/media/files/14698277-1e9c-4f0a-b5fc-e54b6ab2bb7a/img-2101.PNG">
+                  Zobacz w wysokiej rozdzielczosci
+                </a>,
+              ]}
+              closeIcon={<Icon>close</Icon>}
+              header={<CardTitle image="https://www.zakopane.pl/assets/zakopane25/media/files/14698277-1e9c-4f0a-b5fc-e54b6ab2bb7a/img-2101.PNG"/>}
+              horizontal
+              revealIcon={<Icon>more_vert</Icon>}
+            >
+              <h4>sdfsd</h4>
+              <h5>sdffsd</h5>
+              <p1>sfdfsd</p1>
+              <br></br>
+              <h5>fsdfsd</h5>
+            </Card>
+            <Card
+              className="z-depth-1 hoverable "
+              id="Cardposters"
+              actions={[
+                <a key="1" href="https://i.pinimg.com/originals/af/b1/0a/afb10aa49b0734a152710d53f2b79a8e.png">
+                  Zobacz w wysokiej rozdzielczosci
+                </a>,
+              ]}
+              closeIcon={<Icon>close</Icon>}
+              header={<CardTitle image="https://i.pinimg.com/originals/af/b1/0a/afb10aa49b0734a152710d53f2b79a8e.png"/>}
+              horizontal
+              revealIcon={<Icon>more_vert</Icon>}
+            >
+              <h4>sdfsd</h4>
+              <h5>sdffsd</h5>
+              <p1>sfdfsd</p1>
+              <br></br>
+              <h5>fsdfsd</h5>
+            </Card>
+            </Card>
           </Col>
         </Row>
       </div>

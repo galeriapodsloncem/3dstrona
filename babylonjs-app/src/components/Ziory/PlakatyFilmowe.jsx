@@ -17,34 +17,35 @@ import {
 } from "react-materialize";
 import { NavLink } from "react-router-dom";
 import "materialize-css";
-import ListaSztukaUzytkowa from "./ListaSztukaUzytkowa";
+import ListaPlakatowFilmowych from "../../jsony/ListaPlakatowFilmowych";
 
 
 
-const SztukaUzytkowa = ({ listaSztukaUzytkowa }) => {
+const PlakatyFilmowe = ({ listaPlakatowFilmowych }) => {
   //let baseUrl =
     //"https://raw.githubusercontent.com/galeriapodsloncem/3dstrona/master/babylonjs-app/public/";
 
-  const cardsArray = ListaSztukaUzytkowa.map((ListaSztukaUzytkowa) => (
+  const cardsArray = ListaPlakatowFilmowych.map((ListaPlakatowFilmowych) => (
       
 
     <Col m={5} s={12} push="">
       <Card
-      className="z-depth-1 hoverable"
+      className="z-depth-1 hoverable "
+      id="Cardposters"
       actions={[
-        <a key="1" href={ListaSztukaUzytkowa.img}>Zobacz w wysokiej rozdzielczosci</a>
+        <a key="1" href={ListaPlakatowFilmowych.img}>Zobacz w wysokiej rozdzielczosci</a>
       ]}
       closeIcon={<Icon>close</Icon>}
-      header={<CardTitle image={ListaSztukaUzytkowa.img} />}
+      header={<CardTitle image={ListaPlakatowFilmowych.img} />}
       horizontal
       
       revealIcon={<Icon>more_vert</Icon>}
     >
-        <h4>{ListaSztukaUzytkowa.plname}</h4>
-        <h5>{ListaSztukaUzytkowa.autor}</h5>
-      <p1>{ListaSztukaUzytkowa.pldescription}</p1>
+        <h4>{ListaPlakatowFilmowych.plname}</h4>
+        <h5>{ListaPlakatowFilmowych.autor}</h5>
+      <p1>{ListaPlakatowFilmowych.pldescription}</p1>
       <br></br>
-    <h5>{ListaSztukaUzytkowa.cena}</h5>
+    <h5>{ListaPlakatowFilmowych.cena}</h5>
     </Card>
     </Col>
     
@@ -61,4 +62,4 @@ const SztukaUzytkowa = ({ listaSztukaUzytkowa }) => {
     </div>
   );
 };
-export default SztukaUzytkowa;
+export default PlakatyFilmowe;

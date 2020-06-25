@@ -10,17 +10,18 @@ import {
   CardTitle,
 } from "react-materialize";
 import "materialize-css";
-import { className } from "@babylonjs/core";
+
 
 class Wystawy extends React.Component {
   render() {
     return (
       <div>
         <Row>
-          <Col m={1} s={0}></Col>
-          <Col m={10} s={12}>
+          
+          <Col m={12} s={12}> 
+          <Card className="CardHome">
             <Row>
-              <Col m={6} s={12}>
+              <Col m={3} s={12}>
                 <Card
                 id="wystawa1"
                   className=" "
@@ -46,7 +47,7 @@ class Wystawy extends React.Component {
                   </Button>
                 </Card>
               </Col>
-              <Col m={6} s={12}>
+              <Col m={3} s={12}>
                 <Card
                 id="wystawa2"
                   className=" "
@@ -72,11 +73,10 @@ class Wystawy extends React.Component {
                   </Button>
                 </Card>
               </Col>
-            </Row>
-            <Row>
-              <Col m={6} s={12}>
+           
+              <Col m={3} s={12}>
                 <Card
-                  className="yellow "
+                  id="wystawa3"
                   closeIcon={<Icon className="">close</Icon>}
                   header={
                     <CardTitle
@@ -99,9 +99,9 @@ class Wystawy extends React.Component {
                   </Button>
                 </Card>
               </Col>
-              <Col m={6} s={12}>
+              <Col m={3} s={12}>
                 <Card
-                  className="blue "
+                  id="wystawa4"
                   closeIcon={<Icon className="">close</Icon>}
                   header={
                     <CardTitle
@@ -125,7 +125,9 @@ class Wystawy extends React.Component {
                 </Card>
               </Col>
             </Row>
+            </Card>
           </Col>
+          
         </Row>
       </div>
     );

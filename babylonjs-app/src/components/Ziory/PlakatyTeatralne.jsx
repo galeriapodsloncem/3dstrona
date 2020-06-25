@@ -17,34 +17,35 @@ import {
 } from "react-materialize";
 import { NavLink } from "react-router-dom";
 import "materialize-css";
-import ListaMebli from "./ListaMebli";
+import ListaPlakatowTeatralnych from "../../jsony/ListaPlakatowteatralnych"
 
 
 
-const Meble = ({ listaMebli }) => {
+const PlakatyTeatralne = ({ listaPlakatowTeatralnych }) => {
   //let baseUrl =
     //"https://raw.githubusercontent.com/galeriapodsloncem/3dstrona/master/babylonjs-app/public/";
 
-  const cardsArray = ListaMebli.map((ListaMebli) => (
+  const cardsArray = ListaPlakatowTeatralnych.map((ListaPlakatowTeatralnych) => (
       
 
     <Col m={5} s={12} push="">
       <Card
       className="z-depth-1 hoverable"
+      id="Cardposters"
       actions={[
-        <a key="1" href={ListaMebli.img}>Zobacz w wysokiej rozdzielczosci</a>
+        <a key="1" href={ListaPlakatowTeatralnych.img}>Zobacz w wysokiej rozdzielczosci</a>
       ]}
       closeIcon={<Icon>close</Icon>}
-      header={<CardTitle image={ListaMebli.img} />}
+      header={<CardTitle image={ListaPlakatowTeatralnych.img} />}
       horizontal
       
       revealIcon={<Icon>more_vert</Icon>}
     >
-        <h4>{ListaMebli.plname}</h4>
-        <h5>{ListaMebli.autor}</h5>
-      <p1>{ListaMebli.pldescription}</p1>
+        <h4>{ListaPlakatowTeatralnych.plname}</h4>
+        <h5>{ListaPlakatowTeatralnych.autor}</h5>
+      <p1>{ListaPlakatowTeatralnych.pldescription}</p1>
       <br></br>
-    <h5>{ListaMebli.cena}</h5>
+    <h5>{ListaPlakatowTeatralnych.cena}</h5>
     </Card>
     </Col>
     
@@ -61,4 +62,4 @@ const Meble = ({ listaMebli }) => {
     </div>
   );
 };
-export default Meble;
+export default PlakatyTeatralne;

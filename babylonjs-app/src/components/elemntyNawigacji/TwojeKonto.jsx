@@ -17,34 +17,34 @@ import {
 } from "react-materialize";
 import { NavLink } from "react-router-dom";
 import "materialize-css";
-import ListaLamp from "./ListaLamp";
-import NawigacjaPlakaty from "./NawigacjaPlakaty"
+import ListaSztukaUzytkowa from "../../jsony/ListaSztukaUzytkowa";
 
 
-const Lampy = ({ listaLamp }) => {
+
+const SztukaUzytkowa = ({ listaSztukaUzytkowa }) => {
   //let baseUrl =
     //"https://raw.githubusercontent.com/galeriapodsloncem/3dstrona/master/babylonjs-app/public/";
 
-  const cardsArray = ListaLamp.map((ListaLamp) => (
+  const cardsArray = ListaSztukaUzytkowa.map((ListaSztukaUzytkowa) => (
       
 
     <Col m={5} s={12} push="">
       <Card
       className="z-depth-1 hoverable"
       actions={[
-        <a key="1" href={ListaLamp.img}>Zobacz w wysokiej rozdzielczosci</a>
+        <a key="1" href={ListaSztukaUzytkowa.img}>Zobacz w wysokiej rozdzielczosci</a>
       ]}
       closeIcon={<Icon>close</Icon>}
-      header={<CardTitle image={ListaLamp.img} />}
+      header={<CardTitle image={ListaSztukaUzytkowa.img} />}
       horizontal
       
       revealIcon={<Icon>more_vert</Icon>}
     >
-        <h4>{ListaLamp.plname}</h4>
-        <h5>{ListaLamp.autor}</h5>
-      <p1>{ListaLamp.pldescription}</p1>
+        <h4>{ListaSztukaUzytkowa.plname}</h4>
+        <h5>{ListaSztukaUzytkowa.autor}</h5>
+      <p1>{ListaSztukaUzytkowa.pldescription}</p1>
       <br></br>
-    <h5>{ListaLamp.cena}</h5>
+    <h5>{ListaSztukaUzytkowa.cena}</h5>
     </Card>
     </Col>
     
@@ -61,4 +61,4 @@ const Lampy = ({ listaLamp }) => {
     </div>
   );
 };
-export default Lampy;
+export default SztukaUzytkowa;

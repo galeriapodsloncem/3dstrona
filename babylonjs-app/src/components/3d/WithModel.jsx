@@ -8,7 +8,7 @@ import {
   ActionManager,
   SetValueAction,
 } from "@babylonjs/core";
-import ListaEkspozycji from "./ListaEkspozycji";
+import ListaEkspozycji from "../../jsony/ListaEkspozycji";
 import {
   Row,
   Col,
@@ -581,7 +581,7 @@ class WithModel extends Component {
       <div>
         <Row>
           <Col>
-            <Card>
+            
               <Col m={9} s={12} offset="">
                 <Card>
                   <Engine
@@ -1219,31 +1219,11 @@ class WithModel extends Component {
                   </Card>
                 </Row>
               </Col>
-            </Card>
+            
           </Col>
         </Row>
 
-        <button className="btn black" onClick={this.handleClickbar}>
-          bar
-        </button>
-        <button className="btn black" onClick={this.handleClickekspozycja2}>
-          ekspozycja 2
-        </button>
-        <button className="btn black" onClick={this.handleClickekspozycja21}>
-          ekspozycja 21
-        </button>
-        <button className="btn black" onClick={this.handleClickekspozycja22}>
-          ekspozycja 22
-        </button>
-        <button className="btn black" onClick={this.handleClickekspozycja23}>
-          ekspozycja 23
-        </button>
-        <button className="btn black" onClick={this.handleClickekspozycja24}>
-          ekspozycja 24
-        </button>
-        <button className="btn black" onClick={this.handleClickekspozycja25}>
-          ekspozycja 25
-        </button>
+      
       </div>
     );
   }

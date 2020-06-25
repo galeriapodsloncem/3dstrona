@@ -1,7 +1,7 @@
 import React, {  } from 'react';
 import { Icon, Button, SideNav, SideNavItem, Row, Col, Card, CardTitle} from 'react-materialize';
 import 'materialize-css';
-import Plakaty from './PlakatyFilmowe';
+import Plakaty from '../Ziory/PlakatyFilmowe';
 
 class Zbiory extends React.Component {
     render(){

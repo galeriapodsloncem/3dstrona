@@ -17,8 +17,8 @@ import {
 } from "react-materialize";
 import { NavLink } from "react-router-dom";
 import "materialize-css";
-import ListaPlakatowPolitycznych from "./ListaPlakatowPolitycznych";
-import NawigacjaPlakaty from "./NawigacjaPlakaty"
+import ListaPlakatowPolitycznych from "../../jsony/ListaPlakatowPolitycznych";
+
 
 
 const PlakatyPolityczne = ({ listaPlakatowPolitycznych }) => {

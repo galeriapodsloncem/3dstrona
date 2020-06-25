@@ -6,21 +6,22 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 //import Scena from './Scena'
 import NavLeft from './NavLeft.jsx'
-import WithModel from './WithModel.jsx'
-import Wystawy from './wystawy'
-import Zbiory from './Zbiory'
-import PlakatyFilmowe from './PlakatyFilmowe'
-import PlakatyPolityczne from './PlakatyPolityczne'
-import Lampy from './Lampy'
-import Meble from './Meble'
-import PlakatyTeatralne from './PlakatyTeatralne';
-import ZarezerwojPowierzchnie from './ZarezerwojPowierzchnie'
-import SztukaUzytkowa from './SztukaUzytkowa';
-import PlakatySpolecznoReklamowe from './PlakatySpolecznoReklamowe';
-import Aukcje from './Aukcje';
-import Sprzedaz from './Sprzedaz';
-import Home from './Home';
-
+import WithModel from './components/3d/WithModel.jsx'
+import Wystawy from './components/elemntyNawigacji/wystawy'
+import Zbiory from './components/elemntyNawigacji/Zbiory'
+import PlakatyFilmowe from './components/Ziory/PlakatyFilmowe'
+import PlakatyPolityczne from './components/Ziory/PlakatyPolityczne'
+import Lampy from './components/Ziory/Lampy'
+import Meble from './components/Ziory/Meble'
+import PlakatyTeatralne from './components/Ziory/PlakatyTeatralne';
+import ZarezerwojPowierzchnie from './components/elemntyNawigacji/ZarezerwojPowierzchnie'
+import SztukaUzytkowa from './components/Ziory/SztukaUzytkowa';
+import PlakatySpolecznoReklamowe from './components/Ziory/PlakatySpolecznoReklamowe';
+import Aukcje from './components/elemntyNawigacji/Aukcje';
+import Sprzedaz from './components/elemntyNawigacji/Sprzedaz';
+import Home from './components/elemntyNawigacji/Home';
+import Artysci from './components/Ziory/Artysci';
+import Settings from './components/elemntyNawigacji/Settings'
 //import GUI from './WithGUI'
 class App extends React.Component {
 render(){
@@ -62,6 +63,8 @@ render(){
             <Route path="/aukcje" component={Aukcje} />
             <Route path="/sprzedaz" component={Sprzedaz}/>
             <Route path="/home" component={Home}/>
+            <Route path="/artysci" component={Artysci}/>
+            <Route path="/settings" component={Settings}/>
             </Switch>
             </BrowserRouter>
         </Row>

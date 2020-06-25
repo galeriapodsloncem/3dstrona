@@ -19,7 +19,7 @@ import {
   
   import React, { Component } from "react";
   
-  import ListaSprzedaz from "./ListaSprzedaz";
+  import ListaSprzedaz from "../../jsony/ListaSprzedaz";
   
   class Sprzedaz extends Component {
     constructor() {
@@ -42,6 +42,8 @@ import {
           data.plname.toLowerCase().includes(this.state.search.toLowerCase()) ||
           data.autor.toLowerCase().includes(this.state.search.toLowerCase()) ||
           data.cena.toLowerCase().includes(this.state.search.toLowerCase())
+          ||
+          data.status.toLowerCase().includes(this.state.search.toLowerCase())
         ) {
           return data;
         }
@@ -53,7 +55,7 @@ import {
                 className="z-depth-1 hoverable "
                 id="Cardposters"
                 actions={[
-                  <a key="1" href={data.img}>
+                  <a key="1" href={data.img} target="_blank">
                     Zobacz w wysokiej rozdzielczosci
                   </a>,
                 ]}
@@ -66,7 +68,9 @@ import {
                 <h5>{data.autor}</h5>
                 <p1>{data.pldescription}</p1>
                 <br></br>
-                <h5>{data.cena}</h5>
+                <h5>{data.cena} PLN</h5>
+                
+                <Button className={data.status}>{data.status}</Button>
               </Card>
             </Col>
           </div>
@@ -78,12 +82,14 @@ import {
           <Row>
             <Row></Row>
             <Col m={10} s={12}>
+              <Card>
               <input
                 className="input"
                 type="text"
                 placeholder="Wyszukaj aukcje po autorze, nazwie dzieła lub cenie "
                 onChange={(e) => this.searchSpace(e)}
               />
+              </Card>
               {items}
             </Col>
           </Row>
