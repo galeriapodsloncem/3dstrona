@@ -22,8 +22,12 @@ import {
   class Settings extends Component {
     render() {
         return (
-<div className="row">
-<form className="col s12">
+<div className="">
+  <Row>
+<Col>
+<Card>
+  <h4>Registration form</h4>
+<form className="">
   <div className="row">
     <div className="input-field col s6">
       <input placeholder="Placeholder" id="first_name" type="text" className="validate"/>
@@ -63,6 +67,23 @@ import {
     </div>
   
 </form>
+</Card>
+</Col>
+<Col>
+<Card>
+  dsad asd asdsadsadasdasdasd asdasdasdasdasdasdasdasdasdasdasdas
+</Card>
+<Card>
+  dsad asd asdsadsadasdasdasd asdasdasdasdasdasdasdasdasdasdasdas
+</Card>
+<Card>
+  dsad asd asdsadsadasdasdasd asdasdasdasdasdasdasdasdasdasdasdas
+</Card>
+<Card>
+  dsad asd asdsadsadasdasdasd asdasdasdasdasdasdasdasdasdasdasdas
+</Card>
+</Col>
+</Row>
 </div>
     );
 }

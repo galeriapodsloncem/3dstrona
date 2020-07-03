@@ -66,10 +66,10 @@ class Wystawy extends React.Component {
                     </p>
                   }
                   revealIcon={<Icon>more_vert</Icon>}
-                  title="Wystawa 3"
+                  title="Wystawa 2"
                 >
                   <Button className="black left">
-                    Wejscie do wystawy nr 3
+                    Wejscie do wystawy nr 2
                   </Button>
                 </Card>
               </Col>

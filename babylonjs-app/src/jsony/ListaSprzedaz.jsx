@@ -10,7 +10,8 @@ const ListaSprzedaz = [
       pldescription: "w, zestaw ręczników, mydło, humidifier, centralne ogrzewanie, pralkę, płytę grzewczą, zmywarkę, czajnik, ekspres do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: " a hair dryer, a set of towels, soap, humidifier, central heating, washing machine, hob, dishwasher, kettle, filter coffee maker, microwave, tableware",
       cena: "123 ",
-      status: "Kup"
+      status: "Kup",
+      aukcja: ""
     },
     {
       id: "p2",
@@ -21,7 +22,8 @@ const ListaSprzedaz = [
       pldescription: "Kompletnie wes do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: "A fully equiilter coffee maker, microwave, tableware",
       cena: "1233 ",
-      status: "Sprzedano"
+      status: "Sprzedano",
+      aukcja: ""
     },
     {
       id: "p3",
@@ -32,7 +34,8 @@ const ListaSprzedaz = [
       pldescription: "Kompldo włosów, ze ekspres do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: "A fulll find: a hatle, filter coffee maker, microwave, tableware",
       cena: "1123 ",
-      status: "Kup"
+      status: "Kup",
+      aukcja: ""
     },
     {
       id: "p4",autor: "jan jan",
@@ -42,7 +45,8 @@ const ListaSprzedaz = [
       pldescription: "Kompliówkę, zastawę",
       endescription: "A fulttableware",
       cena: "5123 ",
-      status: "Kup"
+      status: "Kup",
+      aukcja: ""
     },
     {
       id: "p5",autor: "jan jan",
@@ -52,7 +56,8 @@ const ListaSprzedaz = [
       pldescription: "Komplemienicy, okna w mieszkaniu są skierowane na Rynek Główny. W miszkaniu znajdziecie Państwo: suszarke do włosów, zestaw ręczników, mydło, humidifier, centralne ogrzewanie, pralkę, płytę grzewczą, zmywarkę, czajnik, ekspres do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: "A fullthe tenement house, the windows in the apartment are facing the Main Square. In the apartment you will find: a hair dryer, a set of towels, soap, humidifier, central heating, washing machine, hob, dishwasher, kettle, filter coffee maker, microwave, tableware",
       cena: "1263 ",
-      status: "Kup"
+      status: "Kup",
+      aukcja: ""
     },
     {
       id: "p6",autor: "jan jan",
@@ -62,7 +67,8 @@ const ListaSprzedaz = [
       pldescription: "Kompletnie wyposażony apartament z kuchnią i łazienką o pwierzchni 80m2. Apartament zlokalizowany jest na trzecim piętrze kamienicy, okna w mieszkaniu są skierowane na Rynek Główny. W miszkaniu znajdziecie Państwo: suszarke do włosów, zestaw ręczników, mydło, humidifier, centralne ogrzewanie, pralkę, płytę grzewczą, zmywarkę, czajnik, ekspres do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: "A fully equipped apartment with kitchen and bathroom with an area of ​​80m2. The apartment is located on the third floor of the tenement house, the windows in the apartment are facing the Main Square. In the apartment you will find: a hair dryer, a set of towels, soap, humidifier, central heating, washing machine, hob, dishwasher, kettle, filter coffee maker, microwave, tableware",
       cena: "1273 ",
-      status: "Kup"
+      status: "Kup",
+      aukcja: ""
     },
     {
       id: "p7",autor: "jan jan",
@@ -72,7 +78,8 @@ const ListaSprzedaz = [
       pldescription: "m umidifier, centralne ogrzewanie, pralkę, płytę grzewczą, zmywarkę, czajnik, ekspres do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: "rds, soap, humidifier, central heating, washing machine, hob, dishwasher, kettle, filter coffee maker, microwave, tableware",
       cena: "1238 ",
-      status: "Kup"
+      status: "Kup",
+      aukcja: ""
     },
     {
       id: "p8",autor: "jan jan",
@@ -82,7 +89,8 @@ const ListaSprzedaz = [
       pldescription: "Kecie Pańskspres do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: "Acated on a hair dryer, a set of towels, soap, humidifier, central heating, washing machine, hob, dishwasher, kettle, filter coffee maker, microwave, tableware",
       cena: "1723 ",
-      status: "Kup"
+      status: "Kup",
+      aukcja: ""
     },
     {
       id: "p9",autor: "jan jan",
@@ -92,7 +100,8 @@ const ListaSprzedaz = [
       pldescription: "Kompletnie wyposażony apartament z kuchnią i łazienką o pwierzchni 80m2. Apartament zlokalizowany jest na trzecim piętrze kamienicy, okna w mieszkaniu są skierowane na Rynek Główny. W miszkaniu znajdziecie Państwo: suszarke do włosów, zestaw ręczników, mydło, humidifier, centralne ogrzewanie, pralkę, płytę grzewczą, zmywarkę, czajnik, ekspres do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: "A fully equipped apartment with kitchen and bathroom with an area of ​​80m2. The apartment is located on the third floor of the tenement house, the windows in the apartment are facing the Main Square. In the apartment you will find: a hair dryer, a set of towels, soap, humidifier, central heating, washing machine, hob, dishwasher, kettle, filter coffee maker, microwave, tableware",
       cena: "123 ",
-      status: "Kup"
+      status: "Kup",
+      aukcja: ""
     },
     {
       id: "p10",autor: "jan jan",
@@ -102,7 +111,8 @@ const ListaSprzedaz = [
       pldescription: "Kompletnie wyposażony apartament z kuchnią i łazienką o pwierzchni 80m2. Apartament zlokalizowany jest na trzecim piętrze kamienicy, okna w mieszkaniu są skierowane na Rynek Główny. W miszkaniu znajdziecie Państwo: suszarke do włosów, zestaw ręczników, mydło, humidifier, centralne ogrzewanie, pralkę, płytę grzewczą, zmywarkę, czajnik, ekspres do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: "A fully equipped apartment with kitchen and bathroom with an area of ​​80m2. The apartment is located on the third floor of the tenement house, the windows in the apartment are facing the Main Square. In the apartment you will find: a hair dryer, a set of towels, soap, humidifier, central heating, washing machine, hob, dishwasher, kettle, filter coffee maker, microwave, tableware",
       cena: "123 ",
-      status: "Kup"
+      status: "Kup",
+      aukcja: ""
     },
     {
       id: "p11",autor: "jan jan",
@@ -112,7 +122,8 @@ const ListaSprzedaz = [
       pldescription: "Kompletnie wyposażony apartament z kuchnią i łazienką o pwierzchni 80m2. Apartament zlokalizowany jest na trzecim piętrze kamienicy, okna w mieszkaniu są skierowane na Rynek Główny. W miszkaniu znajdziecie Państwo: suszarke do włosów, zestaw ręczników, mydło, humidifier, centralne ogrzewanie, pralkę, płytę grzewczą, zmywarkę, czajnik, ekspres do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: "A fully equipped apartment with kitchen and bathroom with an area of ​​80m2. The apartment is located on the third floor of the tenement house, the windows in the apartment are facing the Main Square. In the apartment you will find: a hair dryer, a set of towels, soap, humidifier, central heating, washing machine, hob, dishwasher, kettle, filter coffee maker, microwave, tableware",
       cena: "123 ",
-      status: "Kup"
+      status: "Kup",
+      aukcja: ""
     },
     {
       id: "p12",autor: "jan jan",
@@ -122,7 +133,8 @@ const ListaSprzedaz = [
       pldescription: "Kompletnie wyposażony apartament z kuchnią i łazienką o pwierzchni 80m2. Apartament zlokalizowany jest na trzecim piętrze kamienicy, okna w mieszkaniu są skierowane na Rynek Główny. W miszkaniu znajdziecie Państwo: suszarke do włosów, zestaw ręczników, mydło, humidifier, centralne ogrzewanie, pralkę, płytę grzewczą, zmywarkę, czajnik, ekspres do kawy przelewowy, mikrofalówkę, zastawę",
       endescription: "A fully equipped apartment with kitchen and bathroom with an area of ​​80m2. The apartment is located on the third floor of the tenement house, the windows in the apartment are facing the Main Square. In the apartment you will find: a hair dryer, a set of towels, soap, humidifier, central heating, washing machine, hob, dishwasher, kettle, filter coffee maker, microwave, tableware",
       cena: "123 ",
-      status: "Sprzedano"
+      status: "Sprzedano",
+      aukcja: ""
     },
   
     

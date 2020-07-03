@@ -44,6 +44,8 @@ import {
           data.cena.toLowerCase().includes(this.state.search.toLowerCase())
           ||
           data.status.toLowerCase().includes(this.state.search.toLowerCase())
+          ||
+          data.aukcja.toLowerCase().includes(this.state.search.toLowerCase())
         ) {
           return data;
         }
@@ -55,7 +57,7 @@ import {
                 className="z-depth-1 hoverable "
                 id="Cardposters"
                 actions={[
-                  <a key="1" href={data.img} target="_blank">
+                  <a key={data.id} href={data.img} target="_blank">
                     Zobacz w wysokiej rozdzielczosci
                   </a>,
                 ]}
@@ -70,7 +72,8 @@ import {
                 <br></br>
                 <h5>{data.cena} PLN</h5>
                 
-                <Button className={data.status}>{data.status}</Button>
+                <Button target ="blank" href={data.aukcja} node="a" className= {data.status}>{data.status}</Button>
+                
               </Card>
             </Col>
           </div>

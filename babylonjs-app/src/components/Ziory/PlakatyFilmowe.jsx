@@ -45,7 +45,8 @@ const PlakatyFilmowe = ({ listaPlakatowFilmowych }) => {
         <h5>{ListaPlakatowFilmowych.autor}</h5>
       <p1>{ListaPlakatowFilmowych.pldescription}</p1>
       <br></br>
-    <h5>{ListaPlakatowFilmowych.cena}</h5>
+    
+    
     </Card>
     </Col>
     
