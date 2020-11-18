@@ -116,7 +116,7 @@
     "ramda": "^0.25.0",
     "react": "^16.4.2",
     "react-devtools": "^3.2.3",
-    "semantic-release": "^15.9.12",
+    "semantic-release": "^17.2.3",
     "sinon": "^6.1.4",
     "travis-deploy-once": "^5.0.7",
     "typescript": "^2.9.2",
